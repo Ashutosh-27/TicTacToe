@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.tictak_container{
+    width: 320px;
+    height: 320px;
+    border-radius: .2rem;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    color: blueviolet;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.box.added{
+    font-size: 2.5em;
+    font-weight: 600;
+    transition: font-size .15s;
+}
+
+.subData_container{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reset{
+    padding: 8px;
+    background: transparent;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: .2rem;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva;
+    cursor: pointer; 
+}
+
+.Data_h5{
+    font-size: 1.5rem;
+    font-family: cursive;
+    font-family: 'Dosis', sans-serif;
+}
+
+
+@media screen and (max-width:620px) {
+    .container{
+        flex-direction: column;
+        width: 90vw;
+    }
+    .subData_container{
+        height: 150px;
+        width: 100%;
+        margin-top: 2rem;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .tictak_container{
+        width: 250px;
+        height: 250px;
+        padding: 10px;
+    }
+    .box{
+        width: 75px;
+        height: 75px;
+    }
+    .Data_h5{
+        font-size: 1.2rem;
+    }
+}
